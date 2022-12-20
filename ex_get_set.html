@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARÂMETRO</title>
+    <style>body{background-color: black;} .pag{color: white;font-size: 1.5rem;}</style>
+</head>
+<body>
+    <div class="pag">
+        <p>Criar contador: </p>
+        <p id="demo"></p>
+        <script>
+            const obj = {cont: 0};
+
+            Object.defineProperty(obj, "reset", {
+                get: function() {this.cont = 0;}
+            });
+
+            Object.defineProperty(obj, "increment", {
+                get: function () {this.cont++;}
+            });
+
+            Object.defineProperty(obj, "decrement", {
+                get: function () {this.cont--;}
+            });
+
+            Object.defineProperty(obj, "add", {
+                set: function (value){
+                    this.cont += value;
+                }
+            });
+            Object.defineProperty(obj, "subtract", {
+                set: function (value){
+                    this.cont -= value;
+                }
+            });
+
+            obj.reset;
+            obj.add = 5;
+            obj.subtract = 1;
+            obj.increment;
+            obj.decrement;
+            document.getElementById("demo").innerHTML = obj.cont;
+            
+        </script>
+    </div>
+</body>
+</html>

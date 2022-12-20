@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO</title>
+    <style>body{background-color: black;} .pag{color: white;font-size: 1.5rem;}</style>
+</head>
+<body>
+    <div class="pag">
+        <h1>Data</h1>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <h2 id="data"></h2>
+
+        <script>
+            const d = new Date();
+
+            document.getElementById("demo").innerHTML = d.getFullYear();
+            document.getElementById("demo2").innerHTML = d.getMonth()+1;
+            document.getElementById("demo3").innerHTML = d.getDate();
+
+            
+            document.getElementById("data").innerHTML += d.getDate();
+            document.getElementById("data").innerHTML += d.getMonth()+1;
+            document.getElementById("data").innerHTML += d.getFullYear();
+        
+        </script>
+    </div>
+</body>
+</html>

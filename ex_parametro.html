@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARÂMETRO</title>
+    <style>body{background-color: black;} .pag{color: white;font-size: 1.5rem;}</style>
+</head>
+<body>
+    <div class="pag">
+        <h1 id="demo"></h1>
+        <script>
+            class Car {
+                constructor (nome,year){
+                    this.nome = nome;
+                    this.year = year;
+                }
+            age (x){
+                return x - this.year;
+                }
+            }
+            let date = new Date();
+            let year = date.getFullYear();
+            let myCar = new Car("Ford", 2014);
+            document.getElementById("demo").innerHTML = "A marca do meu carro é " +myCar.nome+ " e tem " +myCar.age(year)+ " anos de uso.";
+        </script>
+    </div>
+</body>
+</html>

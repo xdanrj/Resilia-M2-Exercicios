@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII</title>
+    <style>body{background-color: black;} .pag{color: white;font-size: 1.5rem;}</style>
+
+</head>
+<body>
+    <div class="pag">
+
+        <input type="text" id="myInput">
+        <button id="botao">Converter</button>
+        <p id="resultado"></p>
+
+        <script>
+        document.getElementById("botao").addEventListener("click", funcaoBotao);
+        
+        function funcaoBotao(){
+            document.getElementById("resultado").innerHTML = "";
+            var resInput = document.querySelector("#myInput");
+            var resTexto = String(resInput.value);
+                resSplit = resTexto.split("");
+                console.log(resSplit);
+
+                for(i=0; i < resSplit.length; i++){
+                    resFinal = resSplit[i].charCodeAt(0);
+                    document.getElementById("resultado").innerHTML += resSplit[i] +"= " + resFinal +"<br>";
+                }}
+        </script>
+    </div>
+</body>
+</html>

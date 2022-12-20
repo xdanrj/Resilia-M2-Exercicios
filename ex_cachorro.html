@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARÂMETRO</title>
+    <style>body{background-color: black;} .pag{color: white;font-size: 1.5rem;}</style>
+</head>
+<body>
+    <div class="pag">
+        <p id="demo"></p>
+        <script>
+            class Dog {
+                constructor (nome,idade,raca){
+                    this.nome = nome;
+                    this.idade = idade;
+                    this.raca = raca;
+                }
+            }
+            let myDog = new Dog("Cachorro", 5, "pitbull");
+            document.getElementById("demo").innerHTML =
+            "O nome do meu cachorro é " +myDog.nome+ " da raça " +myDog.raca+ 
+            " com " +myDog.idade+ " anos de idade.";
+        </script>
+    </div>
+</body>
+</html>

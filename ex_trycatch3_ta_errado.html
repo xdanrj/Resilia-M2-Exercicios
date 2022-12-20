@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRYCATCH É PAR OU ÍMPAR</title>
+    <style>body{background-color: black;} .pag{color: white;font-size: 1.5rem;}</style>
+</head>
+<body>
+    <div class="pag">
+        <input id="demo" type="text">
+        <button type="button" onclick="myFunction()">Teste<button>
+        <p id="p01"></p>
+        <script>
+            function myFunction(){
+            const message = document.getElementById("p01");
+            message.innerHTML = "";
+            let x = document.getElementById("demo").value;
+            try{
+                if(x == "") throw "vazio";
+                if(isNaN(x)) throw "Não é um número";
+                if(x % 2 === 0) throw "é par";
+                if(x %2 !== 0) throw "é ímpar";
+                
+            }
+            catch(err){
+                message.innerHTML = "Mensagem: " + err;
+            }
+        }
+        </script>
+        
+    </div>
+</body>
+</html>
